@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+<h1 > Ajax using PHP -  Addition of two numbers   </h1>
+
+Enter first no.<input type="text" id="t1">
+Enter second no.<input type="text" id="t2">
+<button id="b1">Submit</button>
+
+<p id="x"></p>
+
+<script>
+$(document).ready(function() {
+    $("#b1").click(function() {
+        var a = $("#t1").val();
+        var b = $("#t2").val();
+        
+
+        $.post('add.php', { field1: a, field2: b }, function(data) {
+            $("#x").html(data);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

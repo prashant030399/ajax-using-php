@@ -1,0 +1,43 @@
+
+
+
+ <!DOCTYPE html>
+        <html>
+        <head>
+            <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+<h1 > Ajax using PHP -  Hello   </h1>
+<input type= "button" value="ok" id="b1">
+<p id="x"></p>
+
+<script>
+
+
+$(document).ready( function(){
+$("#b1").click( function() {
+$.post('hello.php',{},function(data){
+    $("#x").html(data);   
+} ); 
+} );
+});
+
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
