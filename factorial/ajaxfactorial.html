@@ -1,0 +1,35 @@
+   <!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+<h1 > Ajax using PHP -  Factorial of a number   </h1>
+Enter No.<input type='text' id="t1">
+<button id="b1">Factorial </button>
+<p id ="z"></p>
+
+<script>
+
+$(document).ready(   function(){
+$("#b1").click( function(){
+ var a= $("#t1").val();
+
+$.post('factorial.php',{t1:a}, function(data){
+    $("#z").html(data);
+});
+});
+});
+ 
+ 
+ 
+
+
+</script>
+
+
+
+
+
+
+</body>

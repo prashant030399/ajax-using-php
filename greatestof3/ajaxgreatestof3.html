@@ -1,0 +1,41 @@
+   <!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+<h1 > Ajax using PHP -  Greatest of 3 numbers   </h1>
+
+Enter a<input type ="text" id="t1">
+Enter b<input type ="text" id="t2">
+Enter c<input type ="text" id="t3">
+
+<button id ="b1">Greatestof3</button>
+<p id="z"></p>
+
+
+<script>
+
+$(document).ready( function(){ 
+    $("#b1").click( function(){
+var a=$("#t1").val();
+var b=$("#t2").val();
+var c=$("#t3").val();
+
+$.post('greatestof3.php' , { t1:a, t2:b, t3:c }, function(data){
+
+$("#z").html(data);
+
+});
+});
+});
+
+
+
+
+</script>
+
+
+
+
+<body>
